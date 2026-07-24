@@ -1,238 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Ramphal Memorial Inter College - Login
-</title>
+<title>Login</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="login.css">
 
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 
 </head>
 
-
 <body>
-
-
-<div class="login-page">
-
-
-<!-- Background -->
 
 <div class="background"></div>
 
-
-
-<!-- Login Card -->
-
 <div class="login-card">
 
+<div class="logo">
 
-
-<!-- Logo -->
-
-<div class="logo-box">
-
-<img src="logo1.png"
-alt="School Logo">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSACvKL5J-nrWlyn8NAsfIEV0ZwTkC5FBvJeA_d9t1odA-GQ59hxhQSekzw&s=10" alt="Logo">
 
 </div>
 
+<h1>Welcome</h1>
+  
+<p>Sign in to continue</p>
 
+<div id="g_id_onload"
 
-<h1>
+data-client_id="655794231330-3c0p09klfge0bfmn10j1pbds8uc3pium.apps.googleusercontent.com"
 
-Ramphal Memorial
-
-<br>
-
-Inter College
-
-</h1>
-
-
-<p class="welcome">
-
-Secure School Portal
-
-</p>
-
-
-
-<!-- Role Selection -->
-
-<div class="role-section">
-
-
-<h3>
-
-Login As
-
-</h3>
-
-
-<div class="roles">
-
-
-<button class="role active">
-
-👨‍🎓 Student
-
-</button>
-
-
-<button class="role">
-
-👩‍🏫 Teacher
-
-</button>
-
-
-<button class="role">
-
-👨‍👩‍👧 Parent
-
-</button>
-
-
-<button class="role">
-
-👨‍💼 Principal
-
-</button>
-
+data-callback="handleCredentialResponse">
 
 </div>
 
+<div class="g_id_signin"
+
+data-type="standard"
+
+data-theme="filled_blue"
+
+data-size="large"
+
+data-shape="pill"
+
+data-text="continue_with"
+
+data-logo_alignment="left">
 
 </div>
 
-
-
-<!-- Mobile -->
-
-<div class="input-box">
-
-
-<label>
-
-Mobile Number
-
-</label>
-
-
-<div class="phone-input">
-
-<span>
-
-+91
-
-</span>
-
-
-<input type="tel"
-placeholder="Enter Mobile Number"
-maxlength="10">
-
-
 </div>
-
-
-</div>
-
-
-
-<button class="otp-btn">
-
-Send OTP
-
-</button>
-
-<!-- ==============================
-     OTP Verification Section
-================================ -->
-
-<div class="otp-section" id="otpSection">
-
-
-    <h3>
-        Verify OTP
-    </h3>
-
-
-    <p>
-        Enter the 6 digit OTP sent to your mobile
-    </p>
-
-
-    <div class="otp-boxes">
-
-        <input type="number" maxlength="1">
-
-        <input type="number" maxlength="1">
-
-        <input type="number" maxlength="1">
-
-        <input type="number" maxlength="1">
-
-        <input type="number" maxlength="1">
-
-        <input type="number" maxlength="1">
-
-    </div>
-
-
-    <button class="verify-btn">
-
-        Verify OTP
-
-    </button>
-
-
-    <div class="resend">
-
-        Didn't receive OTP?
-
-        <span id="timer">
-            30
-        </span>
-
-        sec
-
-    </div>
-
-
-</div>
-
-<div class="security">
-
-🔒 Secure OTP Login
-<br>
-📱 One Device Login
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
 
 <script src="login.js"></script>
 
-
 </body>
-
 </html>
