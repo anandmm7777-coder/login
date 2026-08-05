@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Future AI Assistant Pro</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+<div id="overlay" class="overlay"></div>
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+<div class="logo-icon">
+
+<svg viewBox="0 0 24 24">
+<path d="M12 2a7 7 0 0 0-7 7v3a7 7 0 0 0 14 0V9a7 7 0 0 0-7-7Z"/>
+<path d="M9 12h6"/>
+<path d="M12 9v6"/>
+</svg>
+
+</div>
+
+
+<div class="brand-text">
+
+<h2>Future AI</h2>
+<span>Assistant Pro</span>
+
+</div>
+
+</div>
+
+
+  
+
+
+<button class="new-chat" id="newChatBtn">
+
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 5v14"/>
+<path d="M5 12h14"/>
+
+</svg>
+
+
+New Chat
+
+</button>
+
+
+
+
+
+<div class="menu">
+
+
+<div class="menu-title">
+CHAT HISTORY
+</div>
+
+
+<div class="history-list" id="historyList">
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="sidebar-bottom">
+
+
+<button class="side-btn">
+
+
+<svg viewBox="0 0 24 24">
+
+<circle cx="12" cy="12" r="3"/>
+
+<path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 0 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.1a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.2a1.7 1.7 0 0 0-1.4.9Z"/>
+
+</svg>
+
+
+Settings
+
+</button>
+
+
+</div>
+
+
+</aside>
+
+
+
+
+
+
+<!-- MAIN AREA -->
+
+
+<main class="main">
+
+
+
+<header class="topbar">
+
+
+<div class="mobile-menu" id="menuBtn">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M4 6h16"/>
+<path d="M4 12h16"/>
+<path d="M4 18h16"/>
+
+</svg>
+
+</div>
+
+
+
+
+<div class="model-box">
+
+
+<span>Model</span>
+
+
+<select id="modelSelect">
+
+
+<option>
+GPT-4o Mini
+</option>
+
+
+<option>
+Claude
+</option>
+
+
+<option>
+Gemini
+</option>
+
+
+<option>
+Llama
+</option>
+
+<option value="image">Image Generator</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="status">
+
+
+<span class="online-dot"></span>
+
+Online
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- CHAT -->
+
+
+<section class="chat-area" id="chatArea">
+
+
+
+<div class="welcome">
+
+
+<div class="ai-logo">
+
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 2a10 10 0 1 0 10 10"/>
+
+<path d="M8 12h8"/>
+
+<path d="M12 8v8"/>
+
+</svg>
+
+
+</div>
+
+
+<h1>
+Future AI Assistant
+</h1>
+
+
+<p>
+Your intelligent AI workspace
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- INPUT -->
+
+
+<footer class="input-area">
+
+
+<div class="input-box">
+
+
+<textarea 
+id="userInput"
+placeholder="Ask anything..."
+></textarea>
+
+
+
+<button type="button" class="voice-btn" id="voiceBtn">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 1a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z"/>
+
+<path d="M19 10a7 7 0 0 1-14 0"/>
+
+<path d="M12 19v4"/>
+
+</svg>
+
+</button>
+
+
+
+
+<button class="send-btn" onclick="sendMessage()">
+
+<svg viewBox="0 0 24 24">
+
+<path d="m22 2-7 20-4-9-9-4Z"/>
+
+<path d="M22 2 11 13"/>
+
+</svg>
+
+
+</button>
+
+
+</div>
+
+
+
+</footer>
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+<script src="js/storage.js"></script>
+
+<script src="js/ai.js"></script>
+  
+  <script src="js/chat.js"></script>
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>
